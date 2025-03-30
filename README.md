@@ -32,7 +32,7 @@ pip install -e .
 pytest -v --cov=finiteelementanalysis --cov-report term-missing
 ```  
 ### Purpose of the code   
-to be written
+This code is written to [to be written]. The final goal here is to see how each part of the code fit together and what ...
 
 ### Map  
        pre_process: generate mesh
@@ -69,4 +69,25 @@ Solver (Newton–Raphson iterations)
 Visualization & Post-processing
  (visualize.py)
 
+### Steps
+#### Step1: Preprocessing and Mesh Generation
+***Pieces of code:*** `pre_process.py` and `pre_process_demo_helper_fcns.py`.
 
+#### Step2:
+
+#### Step3:
+
+#### Step4:
+
+#### Step5:
+
+#### Step6:
+
+#--------------
+### Tutorials of Use for Each Code Piece  
+### Mesh Generation
+
+
+#--------------
+### Examples
+1. Linear
