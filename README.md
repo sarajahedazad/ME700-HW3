@@ -30,10 +30,11 @@ pip install -e .
 
 ```bash
 pytest -v --cov=finiteelementanalysis --cov-report term-missing
-```  
+```
+---  
 ### Purpose of the code   
 This code is written to [to be written]. The final goal here is to see how each part of the code fit together and what ...
-
+---
 ### Map  
        pre_process: generate mesh
               ↓
@@ -46,6 +47,7 @@ This code is written to [to be written]. The final goal here is to see how each 
               ↓
        visualize: final or incremental results
 ### Map 2
+```
 Pre-processing
  (pre_process.py)
        │
@@ -68,7 +70,7 @@ Solver (Newton–Raphson iterations)
        ▼
 Visualization & Post-processing
  (visualize.py)
-
+```
 ------  
 ### Steps    
 
