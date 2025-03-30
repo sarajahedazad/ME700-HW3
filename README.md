@@ -70,7 +70,7 @@ Visualization & Post-processing
  (visualize.py)
 
 ------  
-###Steps    
+### Steps    
 ---
 ✔️ **Step1: Preprocessing and Mesh Generation**  
 ***Pieces of code:*** `pre_process.py` and `pre_process_demo_helper_fcns.py`.  
