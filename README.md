@@ -69,7 +69,7 @@ Solver (Newton–Raphson iterations)
 Visualization & Post-processing
  (visualize.py)
 
-___
+***
 ### Steps
 ---
 ✔️ **Step1: Preprocessing and Mesh Generation**  
