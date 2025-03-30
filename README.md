@@ -73,11 +73,14 @@ Visualization & Post-processing
 #### Step1: Preprocessing and Mesh Generation
 ***Pieces of code:*** `pre_process.py` and `pre_process_demo_helper_fcns.py`.  
 * `pre_process.py`  
+***Description:*** It is used for []. It's supported for []
+***Main Functions:***  
+* `pre_process_demo_helper_fcns.py`
 ***Description:***  
-***Main Functions***
-#### Step2:
+***Main Functions:***  
+#### Step2: Discretization
 
-#### Step3:
+#### Step3: 
 
 #### Step4:
 
