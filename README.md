@@ -70,10 +70,10 @@ Visualization & Post-processing
  (visualize.py)
 
 ---
-
+---
 ### Steps
-
-✔️ **Step1: Preprocessing and Mesh Generation**
+---
+✔️ **Step1: Preprocessing and Mesh Generation**  
 ***Pieces of code:*** `pre_process.py` and `pre_process_demo_helper_fcns.py`.  
 * `pre_process.py`  
 ***Description:*** It is used for generating structured rectangular meshes for finite element analysis (FEA). It supports 3-node and 6-node triangular meshes, and 4-node and 8-node quadrilateral meshes.  
@@ -89,7 +89,7 @@ Visualization & Post-processing
 
 ---
 
-✔️ **Step2: Discretization (Shape Functions & Quadrature)**
+✔️ **Step2: Discretization (Shape Functions & Quadrature)**   
 ***Pieces of code:*** `discretization.py` and `discretization_demo_helper_fcns.py`.  
 * `discretization.py`  
 ***Description:*** Defines shape functions, their derivatives, and Gauss integration rules for different finite element types.  
@@ -107,8 +107,8 @@ Visualization & Post-processing
 
 ---
 
-✔️ **Step3: Element-Level Computations**
-***Pieces of code:*** `local_element.py`  
+✔️ **Step3: Element-Level Computations**   
+***Pieces of code:*** `local_element.py`    
 ***Description:*** Computes local stiffness matrices, internal force (residual) vectors, and distributed loads for hyperelastic finite element problems.  
 ***Main Functions:***
   - `element_residual`: Calculates element residual vectors for hyperelastic materials.
@@ -116,8 +116,8 @@ Visualization & Post-processing
 
 ---
 
-✔️ **Step4: Global Assembly**
-***Pieces of code:*** `assemble_global.py`  
+✔️ **Step4: Global Assembly**   
+***Pieces of code:*** `assemble_global.py`    
 ***Description:*** Assembles local element-level computations into global stiffness matrices, residual vectors, and traction vectors.  
 ***Main Functions:***
   - `global_stiffness` and `global_stiffness_sparse`: Assemble the global stiffness matrix from local element stiffness matrices.
@@ -126,7 +126,7 @@ Visualization & Post-processing
 
 ---
 
-✔️ **Step5: Solver**
+✔️ **Step5: Solver**   
 ***Pieces of code:*** `solver.py` and `solver_demo_helper_functions.py`  
 * `solver.py`  
 ***Description:*** Solves nonlinear finite element equations for hyperelastic materials using Newton–Raphson iterative methods.  
@@ -141,7 +141,7 @@ Visualization & Post-processing
 
 ---
 
-✔️ **Step6: Visualization & Post-Processing**
+✔️ **Step6: Visualization & Post-Processing**   
 ***Pieces of code:*** `visualize.py`  
 ***Description:*** Offers visualization functions to plot and animate finite element analysis results, specifically mesh deformations and displacement fields.  
 ***Main Functions:***
