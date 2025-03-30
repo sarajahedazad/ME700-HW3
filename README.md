@@ -30,5 +30,43 @@ pip install -e .
 
 ```bash
 pytest -v --cov=finiteelementanalysis --cov-report term-missing
-```
+```  
+### Purpose of the code   
+to be written
+
+### Map  
+       pre_process: generate mesh
+              ↓
+       solver: for each load step
+         → assemble_global:
+             - local_element computations
+             - sum into global K, R
+         → solve system
+         → check convergence
+              ↓
+       visualize: final or incremental results
+### Map 2
+Pre-processing
+ (pre_process.py)
+       │
+       ▼
+Discretization (shape functions & quadrature)
+ (discretization.py)
+       │
+       ▼
+Element-level computations
+ (local_element.py)
+       │
+       ▼
+Global assembly
+ (assemble_global.py)
+       │
+       ▼
+Solver (Newton–Raphson iterations)
+ (solver.py)
+       │
+       ▼
+Visualization & Post-processing
+ (visualize.py)
+
 
