@@ -111,10 +111,11 @@ Visualization & Post-processing
 
 ✔️ **Step3: Element-Level Computations**   
 ***Pieces of code:*** `local_element.py`    
-***Description:*** Computes local stiffness matrices, internal force (residual) vectors, and distributed loads for hyperelastic finite element problems.  
+***Description:*** Computes local stiffness matrices, internal force (residual) vectors, and distributed loads for finite element problems.  
 ***Main Functions:***
   - `element_residual`: Calculates element residual vectors for hyperelastic materials.
   - `element_distributed_load`: Computes element-level load vectors from distributed surface tractions.
+  - `element_stiffness`: Computes the element stiffness matrix.
 
 
 
@@ -131,7 +132,7 @@ Visualization & Post-processing
 ✔️ **Step5: Solver**   
 ***Pieces of code:*** `solver.py` and `solver_demo_helper_functions.py`  
 * `solver.py`  
-***Description:*** Solves nonlinear finite element equations for hyperelastic materials using Newton–Raphson iterative methods.  
+***Description:*** Solves nonlinear finite element equations using Newton–Raphson iterative methods.  
 ***Main Functions:***
   - `hyperelastic_solver`: Performs incremental loading and solves nonlinear equations iteratively to determine nodal displacements.
 
@@ -159,8 +160,9 @@ In this first numerical example, we demonstrate how to compute the small-strain 
 Specifically, we consider a cantilever beam modeled as a two-dimensional domain with dimensions L×H.
 '''
 # importing modules
-from src.finiteelementanalysis import pre_process as pre
-from src.finiteelementanalysis import pre_process_demo_helper_fcns as pre_demo
+from finiteelementanalysis import pre_process as pre
+from finiteelementanalysis import pre_process_demo_helper_fcns as pre_demo
+from finiteelementanalysis.solver import hyperelastic_solver
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -190,24 +192,24 @@ dload_info = pre.assign_uniform_load_rect(boundary_edges, "right", q, 0.0)
 #-------Material Properties----------
 mu = 10
 kappa = 100
-
-
-''' Discretization (shape functions and quadrature) '''
-
-
-'''Element-level computations'''
-
-
-'''Global Assembly'''
+material_props = np.array([mu, kappa])
 
 
 '''Solving'''
+# Solving for a hyperelastic material
+nr_num_steps = 5
+nr_print = True
+
+displacements_all, nr_info_all = hyperelastic_solver(material_props, ele_type, coords.T, connect.T, fixed_nodes, dload_info, nr_print, nr_num_steps, nr_tol=1e-9, nr_maxit=30)
 
 
 '''Visualization and PostProcessing'''
 # Visualizing the mesh
 fname = "mesh_2D.png"
 pre_demo.plot_mesh_2D(fname, ele_type, coords, connect)
+
+# TO BE WRITTEN
+
 
 
 ```
