@@ -153,6 +153,65 @@ Visualization & Post-processing
 ---
 ***Example***: We have a 2D cantilever of dimensions L×H that is fixed at one end and is exposed to traction at the other end. We want to look at linear elasticity here.
 
+```
+'''
+In this first numerical example, we demonstrate how to compute the small-strain solution for a 2D isotropic linear elastic medium.
+Specifically, we consider a cantilever beam modeled as a two-dimensional domain with dimensions L×H.
+'''
+# importing modules
+from src.finiteelementanalysis import pre_process as pre
+from src.finiteelementanalysis import pre_process_demo_helper_fcns as pre_demo
+import numpy as np
+import matplotlib.pyplot as plt
+
+'''Preprocess'''
+#---------Defining a mesh------------
+x_orig, y_orig = 0, 0 # coordinates of the left-below corner of a rectangle
+L = 200. # Length
+H = 20. # Height
+Nx = 50 # Number of cells in the x direction
+Ny = 5 # Number of cells in the y direction
+ele_type = 'D2_nn3_tri' # Type of element for teh mesh
+num_gauss_pts = 1
+
+# Coordinates and connectivities in a mesh 
+coords, connect = pre.generate_rect_mesh_2d(ele_type, x_orig, y_orig, x_orig + L, x_orig + H, Nx, Ny)
+
+
+#-------Defining Boundaries of the Mesh--------
+# With the following method, boundary nodes and edges will be dictionaries with keys: right, left, bottom, top
+boundary_nodes, boundary_edges = pre.identify_rect_boundaries(coords, connect, ele_type, x_orig, x_orig + L, y_orig, y_orig + H)
+# Fix left boundary: both u_x and u_y = 0.
+fixed_nodes = pre.assign_fixed_nodes_rect(boundary_nodes, "left", 0.0, 0.0)
+# Assign distributed load on the right boundary (uniform on the x direction, 0 on y direction)
+q = 10.0
+dload_info = pre.assign_uniform_load_rect(boundary_edges, "right", q, 0.0)
+
+#-------Material Properties----------
+mu = 10
+kappa = 100
+
+
+''' Discretization (shape functions and quadrature) '''
+
+
+'''Element-level computations'''
+
+
+'''Global Assembly'''
+
+
+'''Solving'''
+
+
+'''Visualization and PostProcessing'''
+# Visualizing the mesh
+fname = "mesh_2D.png"
+pre_demo.plot_mesh_2D(fname, ele_type, coords, connect)
+
+
+```
+
 
 ---
 ### Confusion
