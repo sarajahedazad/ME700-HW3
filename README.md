@@ -35,7 +35,7 @@ pytest -v --cov=finiteelementanalysis --cov-report term-missing
 ### Purpose of the code   
 This code is written to [to be written]. The final goal here is to see how each part of the code fit together and what ...
 ---
-### Map  
+### Map 1
        pre_process: generate mesh
               ↓
        solver: for each load step
@@ -77,7 +77,7 @@ Visualization & Post-processing
 ✔️ **Step1: Preprocessing and Mesh Generation**  
 ***Pieces of code:*** `pre_process.py` and `pre_process_demo_helper_fcns.py`.  
 * `pre_process.py`  
-***Description:*** It is used for generating structured rectangular meshes for finite element analysis (FEA). It supports 3-node and 6-node triangular meshes, and 4-node and 8-node quadrilateral meshes.  
+***Description:*** It is used for generating meshes for finite element analysis (FEA). It supports 3-node and 6-node triangular meshes, and 4-node and 8-node quadrilateral meshes.  
 ***Main Functions:***  
   - `generate_rect_mesh_2d`: Generates rectangular meshes based on provided dimensions, subdivisions, and element types.
 
@@ -150,12 +150,3 @@ Visualization & Post-processing
   - `make_deformation_gif`: Creates animated GIFs depicting mesh deformation progression through loading steps.
 
 
-
-
-### Tutorials of Use for Each Code Piece  
-### Mesh Generation
-
-
-#--------------
-### Examples
-1. Linear
