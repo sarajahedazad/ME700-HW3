@@ -151,5 +151,16 @@ Visualization & Post-processing
   - `make_deformation_gif`: Creates animated GIFs depicting mesh deformation progression through loading steps.
 
 ---
-***Example***: We have a 2D cantilever of dimensions L×H that is fixed at one end and 
-. Geometrical parameters and mesh density are first defined and the rectangular domain is generated using the RectangleMesh function. We also choose a criss-crossed structured mesh:
+***Example***: We have a 2D cantilever of dimensions L×H that is fixed at one end and is exposed to traction at the other end. We want to look at linear elasticity here.
+
+
+---
+### Confusion
+Question: Look at this from `tutorial_sparse_solver.ipynb`:
+```
+fixed_nodes = pre.assign_fixed_nodes_rect(boundary_nodes, "left", 0.0, 0.0)
+# Assign distributed load on the right boundary
+q = 10.0
+dload_info = pre.assign_uniform_load_rect(boundary_edges, "right", q, 0.0)
+```   
+How do you know whether to apply a boundary condition to the "nodes" or "edges"?
