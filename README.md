@@ -150,4 +150,6 @@ Visualization & Post-processing
   - `plot_mesh_2D`: Plots initial and deformed meshes along with displacement magnitude.
   - `make_deformation_gif`: Creates animated GIFs depicting mesh deformation progression through loading steps.
 
-
+---
+***Example***: We have a 2D cantilever of dimensions L×H that is fixed at one end and 
+. Geometrical parameters and mesh density are first defined and the rectangular domain is generated using the RectangleMesh function. We also choose a criss-crossed structured mesh:
