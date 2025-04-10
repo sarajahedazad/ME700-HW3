@@ -47,6 +47,8 @@ This repository is designed to solve finite element analysis (FEA) cproblems. It
          → check convergence
               ↓
        visualize: final or incremental results
+
+![alt text](https://github.com/sarajahedazad/ME700-HW3/blob/main/figures/Block%20diagram.png)
 ### Map 2
 ```
 Pre-processing
