@@ -36,7 +36,7 @@ pytest -v --cov=finiteelementanalysis --cov-report term-missing
 This repository is designed to solve finite element analysis (FEA) cproblems. It systematically generates meshes, computes shape functions, assembles local element matrices into global systems, and iteratively solves nonlinear equations using the Newton–Raphson method. Comprehensive visualization tools are included to analyze and interpret the results, providing clear insights into mesh deformations and stress distributions.
 
 ---
-### Map 1
+### Map
        pre_process: generate mesh
               ↓
        solver: for each load step
