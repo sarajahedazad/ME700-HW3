@@ -48,34 +48,10 @@ This repository is designed to solve finite element analysis (FEA) cproblems. It
               ↓
        visualize: final or incremental results
 
+<p align="center">
+<img src="https://github.com/sarajahedazad/ME700-HW3/blob/main/figures/Block%20diagram.png" width="250">
+</p>
 
-<img src="https://github.com/sarajahedazad/ME700-HW3/blob/main/figures/Block%20diagram.png" width="300">
-
-### Map 2
-```
-Pre-processing
- (pre_process.py)
-       │
-       ▼
-Discretization (shape functions & quadrature)
- (discretization.py)
-       │
-       ▼
-Element-level computations
- (local_element.py)
-       │
-       ▼
-Global assembly
- (assemble_global.py)
-       │
-       ▼
-Solver (Newton–Raphson iterations)
- (solver.py)
-       │
-       ▼
-Visualization & Post-processing
- (visualize.py)
-```
 ------  
 ### Steps    
 
