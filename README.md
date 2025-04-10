@@ -48,7 +48,9 @@ This repository is designed to solve finite element analysis (FEA) cproblems. It
               ↓
        visualize: final or incremental results
 
-![alt text](https://github.com/sarajahedazad/ME700-HW3/blob/main/figures/Block%20diagram.png)
+
+<img src="[path_or_url_to_your_image.png](https://github.com/sarajahedazad/ME700-HW3/blob/main/figures/Block%20diagram.png)" width="300">
+
 ### Map 2
 ```
 Pre-processing
